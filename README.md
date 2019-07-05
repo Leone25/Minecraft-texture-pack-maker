@@ -21,3 +21,4 @@ Please ask befor starting to work on anything, we migth be already working on th
 
 ## Credits
 All node module used in this project can be found in the [packge-lock.json file](https://github.com/Leone25/Minecraft-texture-pack-maker/blob/master/minecraft%20texture%20pack%20maker/package-lock.json)
+The fonts is by www.vicfieger.com and www.pizzadude.dk
