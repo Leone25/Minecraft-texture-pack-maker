@@ -12,7 +12,7 @@ My plan is to implement this functions in pretty much this order:
 
 ## What is already done
 Rigth now done is very litle, we got a logo, an a super simple node js http server, and just a blank page.
-We already choose a color pallet, plannig to make the editor dark mode only, but it can be changed if anyone has some suggestion to improve you can find the pallet that we are using here( https://github.com/Leone25/Minecraft-texture-pack-maker/blob/master/minecraft%20texture%20pack%20maker/ds-darksites-11c.jpg got that form anther site).
+We already choose a color pallet, plannig to make the editor dark mode only, but it can be changed if anyone has some suggestion to improve you can find the pallet that we are using [here](https://github.com/Leone25/Minecraft-texture-pack-maker/blob/master/minecraft%20texture%20pack%20maker/ds-darksites-11c.jpg), got that form anther site.
 
 ## Contibute
 Please ask befor starting to work on anything, we migth be already working on the thing you are willing to do and your work migth just go waste. So please ask on [discord](https://discord.gg/34KS6Bc) first and then we can talk in to what you are looking to do and agree.
