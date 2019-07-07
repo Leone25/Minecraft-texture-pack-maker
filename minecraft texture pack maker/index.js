@@ -3,8 +3,7 @@ const app = express();
 const fs = require('fs');
 
 // Text to insert into template
-const sampleText = 'hello world!!!';
-const navbar = 'lol';
+const navbar = '';
 
 // Template to accept sampleText
 const filepathindex = 'index.html';
@@ -19,6 +18,8 @@ function substituteString(input, stringToChange, substitute) {
 	}
 	return input;
 }
+
+app.use('/source', express.static('source'));
 
 app.get('/', function (req, res) {
 	var result = fs.readFileSync(filepathindex).toString();
