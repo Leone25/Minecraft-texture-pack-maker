@@ -20,6 +20,8 @@ function substituteString(input, stringToChange, substitute) {
 }
 
 app.use('/source', express.static('source'));
+app.use('/minecraft 16x16', express.static('minecraft'));
+app.use('/minecraft 32x32', express.static('minecraft32'));
 
 app.get('/', function (req, res) {
 	var result = fs.readFileSync(filepathindex).toString();
@@ -28,3 +30,15 @@ app.get('/', function (req, res) {
 })
 
 app.listen(8080);
+
+/*
+sharp('input.jpg')
+  .resize(200, 200)
+  .toFile('ouput.jpg', function(err) {
+    // output.jpg is a 200 pixels wide and 200 pixels high image
+    // containing a scaled and cropped version of input.jpg
+});
+
+
+
+*/
