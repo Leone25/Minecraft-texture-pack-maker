@@ -1,4 +1,4 @@
-# Minecraft texture pack maker ![Logo](https://github.com/Leone25/Minecraft-texture-pack-maker/blob/master/minecraft%20texture%20pack%20maker/logo%2068x68.png)
+# Minecraft texture pack maker ![Logo](https://github.com/Leone25/Minecraft-texture-pack-maker/blob/master/minecraft%20texture%20pack%20maker/source/logo%2068x68.png)
 
 This project is menth to be an open suorce minecraft texture pack creator.
 
