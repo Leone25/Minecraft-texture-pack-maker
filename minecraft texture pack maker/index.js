@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const fs = require('fs');
+const sharp = require('sharp');
 
 // Text to insert into template
 const navbar = '';
@@ -19,14 +20,24 @@ function substituteString(input, stringToChange, substitute) {
 	return input;
 }
 
+function resizeImage(path, width, height) {
+	var img = fs.readFileSync(path);
+	let img = sharp();
+	img = img.resize(width, height);
+	return img;
+}
+
 app.use('/source', express.static('source'));
-app.use('/minecraft 16x16', express.static('minecraft'));
-app.use('/minecraft 32x32', express.static('minecraft32'));
 
 app.get('/', function (req, res) {
 	var result = fs.readFileSync(filepathindex).toString();
 	result = substituteString(result, '${navbar}', navbar);
 	res.send(result);
+})
+
+app.get('/minecraft/:path', function (req, res) { 
+	//res.send(resizeImage());
+	console.log(req.params.path);
 })
 
 app.listen(8080);

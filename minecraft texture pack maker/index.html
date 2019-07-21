@@ -36,36 +36,48 @@
   height:3000px;
 }
  
+.blocks {
+	display: grid;
+	grid-template-columns: auto;
+}
+
 .block {
-	
+	border: 1px solid #fff;
+	text-align: center;
 }
-.block-top{
-	
-}
-.block-rigth{
-	
-}
-.block-left{
-	
+
+.block-image {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
+	margin-bottom: 5px;
 }
 </style>
 <body class="body" link="#C0C0C0" vlink="#808080" alink="#FF0000">
 <div class="nav-bar" >
 <img src="source/logo 544x544.png" alt="logo" width="290px" style="display: block;margin-left: auto;margin-right: auto;margin-top: 20px;">
 <p style="font-family: ArcadeTitle; font-size: 23px;text-align:center;margin-right:10px;">Minecraft texture pack maker</p>
-<div class="nav-bar-but" onclick="window.location.href = '${Home}';"><p style="margin-left:15px;font-family: Arcade;font-size: 23px;">Home</p></div>
+<div class="nav-bar-but" onclick="window.location.href = '${home}';"><p style="margin-left:15px;font-family: Arcade;font-size: 23px;">Home</p></div>
 ${navbar}
 <div class="nav-bar-but" onclick="window.location.href = '${newProject}';" ><p style="margin-left:15px;font-family: Arcade;font-size: 23px;">+ New pack</p></div>
 </div>
 <div class="main">
 test
-<table class="blocks">
-<tr>
-<th><div class="block">
-<img src="source/side_T.png" class="block-top" width="64" height="64">
-<img src="source/side_R.png" class="block-rigth" width="64" height="64">
-<img src="source/side_L.png" class="block-left" width="64" height="64">
-</div></th>
+<div class="blocks">
+<div class="block">
+<img src="source/logo 544x544.png" alt="logo" width="128px" class="block-image">
+test
+</div>
+<div class="block">
+<img src="source/logo 544x544.png" alt="logo" width="128px" class="block-image">
+test
+</div>
+<div class="block">
+<img src="source/logo 544x544.png" alt="logo" width="128px" class="block-image">
+test
+</div>
+</div>
 </th>
 </table>
 </div>
