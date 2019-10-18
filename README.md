@@ -2,6 +2,9 @@
 
 This project is menth to be an open suorce minecraft texture pack creator.
 
+## Currently working on/require help with:
+Making the grind thta displais the various blocks, that is both scalble and will adapt by showing more elements in one page as the screen gets bigger and thta shows the blocks in isometric view(planning on doing this client side to remove load form the server) [i realy need help with this] {please send help, ty}.
+
 ## To do list
 My plan is to implement this functions in pretty much this order:
 1. Implement a basic gui tant allow the end user to select the block/item/other texture to modify and open such texture in an online editor to modify it
