@@ -2,11 +2,11 @@ const express = require('express');
 const app = express();
 const fs = require('fs');
 const sharp = require('sharp');
+const tree = require('./stuff.json');
 
 // Text to insert into template
 const navbar = '';
 
-// Template to accept sampleText
 const filepathindex = 'index.html';
 
 function substituteString(input, stringToChange, substitute) {
@@ -29,9 +29,34 @@ function resizeImage(path, width, height) {
 
 app.use('/source', express.static('source'));
 
+app.use('/default', express.static('default'));
+
 app.get('/', function (req, res) {
 	var result = fs.readFileSync(filepathindex).toString();
 	result = substituteString(result, '${navbar}', navbar);
+	var blocksDiv = '';
+	tree.forEach(block => {
+		if (block.textureType == 0) {
+			blocksDiv += `
+			<div class="block">
+			<img src="default/${block.textureTop}" class="top"></img>
+			<img src="default/${block.textureTop}" class="left"></img>
+			<img src="default/${block.textureTop}" class="right"></img>
+			<div class="block-name">${block.name}</div>
+			</div>`;
+		} else if (block.textureType == 1) {
+			blocksDiv += `
+			<div class="block">
+			<img src="default/${block.textureTop}" class="top"></img>
+			<img src="default/${block.textureSide}" class="left"></img>
+			<img src="default/${block.textureSide}" class="right"></img>
+			<div class="block-name">${block.name}</div>
+			</div>`;
+		}
+	});
+	
+	result = substituteString(result, '${blocks}', blocksDiv);
+	
 	res.send(result);
 })
 
