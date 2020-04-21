@@ -1,0 +1,6 @@
+{
+	"port":8080,
+	"template":"template.html",
+	"404page":"404.html",
+	"objList":"./obj-list.json"
+}

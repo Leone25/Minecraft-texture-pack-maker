@@ -1,0 +1,93 @@
+@font-face { font-family: ArcadeTitle; src: url('/source/KarmaticArcade.otf'); } 
+@font-face { font-family: Arcade; src: url('/source/ARCADECLASSIC.TTF'); }
+.body {
+	background-color: #23272A;
+	margin: 0;
+	display: grid;
+	grid-template-columns: auto auto;
+	color: white;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+}
+
+.sidebar {
+	border-right: solid 3px white;
+	width: 300px;
+	padding: 20px;
+	background:#2C2F33;
+}
+
+.logo {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 20px;
+}
+
+.sidebar li{
+	margin-left:15px;
+	font-family: Arcade;
+	font-size: 30px;
+	min-height: 30px;
+	padding: 10px;
+	list-style-type: none;
+	border-bottom: solid 3px white;
+	background: linear-gradient(#0000, #0000);
+}
+
+.sidebar li:hover{
+	border-bottom: solid 3px #298625;
+	background: linear-gradient(#0000, #298625);
+}
+
+.main {
+	height: 100%;
+	width: calc(100vw - 460px);
+}
+
+.blocks-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.block{
+	position: relative;
+	width: 200px;
+	height: 230px;
+	margin: 20px;
+	margin-top:66px;
+	border: solid 3px white;
+	background: #2C2F33;
+	flex: none;
+}
+.top{
+	width:114px;
+	height:100px;
+	transform: rotate(150deg) translate(-40px, -16px) skew(30deg, 0deg);
+	position: absolute;
+	left: 0px;
+	top: -29.6px;
+}
+.right{
+	width:100px;
+	height:100px;
+	transform: skew(180deg,210deg);
+	position: absolute;
+	top: 43px;
+}
+.left{
+	width:100px;
+	height:100px;
+	transform: skew(180deg,150deg);
+	position: absolute;
+	left:100px;
+	top: 43px;
+}
+.block-name {
+	margin-top: 170px;
+	text-align: center;
+	font-family: Arcade;
+	font-size: 30px;
+}
